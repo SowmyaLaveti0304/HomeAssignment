@@ -26,8 +26,10 @@ This assignment is divided into three key parts:
 ### Outputs:
 - Original Shape: (4, 6)  
 - Rank: 2  
-- Reshaped Shape: (2, 3, 4)  
-- Transposed Shape: (3, 2, 4)  
+- Reshaped Shape: (2, 3, 4)
+- Reshaped Rank: 3 
+- Transposed Shape: (3, 2, 4)
+- Transposed Rank: 3
 
 ### Broadcasting Explanation:
 Broadcasting in TensorFlow is a technique that automatically expands the shape of a smaller tensor to match a larger one along compatible dimensions. This allows element-wise operations between tensors of different shapes without needing explicit reshaping or copying data, making computations more efficient and memory-friendly.
