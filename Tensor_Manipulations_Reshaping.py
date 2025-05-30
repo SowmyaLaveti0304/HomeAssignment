@@ -12,11 +12,15 @@ print("Original Shape:", shape.numpy())
 
 #3: Reshape it to (2, 3, 4)
 reshaped_tensor = tf.reshape(original_tensor, shape=(2, 3, 4))
+rank1= tf.rank(reshaped_tensor)
 print("\nReshaped Tensor Shape (2, 3, 4):", reshaped_tensor.shape)
+print("\nReshaped Tensor Rank (2, 3, 4):", rank1.numpy())
 
 # Transpose it to (3, 2, 4)
 transposed_tensor = tf.transpose(reshaped_tensor, perm=[1, 0, 2])
+rank2= tf.rank(transposed_tensor)
 print("Transposed Tensor Shape (3, 2, 4):", transposed_tensor.shape)
+print("\nTransposed Tensor Rank (2, 3, 4):", rank2.numpy())
 
 # 4: Broadcasting a smaller tensor (1, 4) and add to the transposed tensor
 small_tensor = tf.constant([[1, 2, 3, 4]], dtype=tf.float32)
